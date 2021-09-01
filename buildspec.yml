@@ -2,10 +2,18 @@ version: 0.2
 
 phases: 
   build:
-    commond:
+    commands:
+      #- mkdir alljar
+      - ls
       - cd 00_framework
       - maven install
       - ./cp-jar.sh
+
+  post_build:
+    commands:
+      - pwd
+      - ls
+    
 
 artifacts: 
   files: 
