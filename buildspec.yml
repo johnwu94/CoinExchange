@@ -1,0 +1,14 @@
+version: 0.2
+
+phases: 
+  build:
+    commond:
+      - cd 00_framework
+      - maven install
+      - ./cp-jar.sh
+
+artifacts: 
+  files: 
+    - "**/*.jar"
+  discard-paths: yes
+  base-directory: "alljar/"      
